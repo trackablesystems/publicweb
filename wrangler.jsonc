@@ -1,0 +1,16 @@
+{
+  // trackable.systems — static site served from Workers Static Assets.
+  // There is no build step: the repo root is the asset directory.
+  "name": "publicweb",
+  "compatibility_date": "2026-10-06",
+
+  // Serves index.html, _headers and anything else at the repo root.
+  "assets": {
+    "directory": "./"
+  },
+
+  // Required by `wrangler preview` so branch builds get their own URL.
+  // Empty is correct: assets and compatibility settings stay at the top
+  // level and are inherited.
+  "previews": {}
+}
