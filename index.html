@@ -129,6 +129,42 @@ footer{border-top:1px solid var(--rule);padding:30px 0 40px}
   .trace svg path{stroke-dasharray:3000;stroke-dashoffset:3000;animation:draw 2.6s ease-out .3s forwards}
   @keyframes draw{to{stroke-dashoffset:0}}
 }
+
+/* ask the fleet, roadmap preview */
+.askfleet{padding:96px 0 104px;border-top:1px solid var(--rule)}
+.af-lede{margin-top:20px;max-width:620px;color:var(--graphite)}
+.af-grid{display:grid;grid-template-columns:1.32fr 1fr;gap:38px;margin-top:40px;align-items:start}
+.af-chat{border:1px solid var(--rule);background:#fff}
+.af-head{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid var(--rule);background:#F4F6F4}
+.af-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:15px;letter-spacing:-.01em}
+.af-sub{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--graphite);margin-top:3px}
+.af-flag{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:#8A5A00;background:#FFF4DC;border:1px solid #E8D5A8;padding:5px 9px;white-space:nowrap}
+.af-body{padding:22px}
+.af-q{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;padding:12px 16px;background:var(--ink);color:var(--paper);display:inline-block;max-width:100%}
+.af-a{margin-top:18px}
+.af-a p{font-size:15.5px;line-height:1.62;margin-bottom:13px}
+.af-c{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;color:var(--green);border:1px solid #BFD9C8;background:#F1F8F3;padding:1px 5px;white-space:nowrap}
+.af-verdicts{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px}
+.af-v{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;padding:5px 10px;border:1px solid}
+.af-v-att{color:var(--ink);border-color:var(--ink);background:#EEF2F7}
+.af-v-ver{color:var(--deep);border-color:#9CC9AE;background:#F1F8F3}
+.af-v-unr{color:#8A2A12;border-color:#E0B4A4;background:#FDF2EE}
+.af-limit{margin-top:16px;padding:14px 16px;border-left:3px solid var(--rule);background:#FAFAF8;font-size:14.5px;line-height:1.58;color:var(--graphite)}
+.af-limit-k{display:block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);margin-bottom:5px}
+.af-sms{border:1px solid var(--rule);background:#fff;padding:18px 20px}
+.af-sms-k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;color:var(--green);margin-bottom:11px}
+.af-sms p{font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.66;color:var(--ink)}
+.af-sms-ref{margin-top:11px;color:var(--graphite)!important;font-size:11.5px!important}
+.af-points{list-style:none;margin-top:26px}
+.af-points li{font-size:14.5px;line-height:1.58;color:var(--graphite);padding:14px 0;border-top:1px solid var(--rule)}
+.af-points li b{color:var(--ink);font-weight:600}
+.af-note{margin-top:34px;padding-top:18px;border-top:1px solid var(--rule);font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--graphite)}
+@media(max-width:860px){
+  .askfleet{padding:68px 0 76px}
+  .af-grid{grid-template-columns:1fr;gap:26px}
+  .af-body{padding:18px}
+  .af-q{font-size:16px}
+}
 </style>
 </head>
 <body>
@@ -261,6 +297,60 @@ footer{border-top:1px solid var(--rule);padding:30px 0 40px}
     <div class="lv-tag">LEVEL 3<small>KEPT CURRENT</small></div>
     <div><h3>Continuous intelligence</h3><p>The attested record: every deviation attributed, forensic reports after significant events, and the performance number you hand a lender, an auditor, or a buyer <b>without the data-quality caveat.</b></p></div>
   </div>
+</div></section>
+
+<section class="askfleet" id="ask"><div class="wrap">
+  <div class="eyebrow" style="margin-bottom:16px">On the roadmap</div>
+  <h2>Coming: ask the fleet.</h2>
+  <p class="af-lede">You ask a question about your fleet. You get an answer with the records behind it, and a plain statement of what the data cannot show. Not built yet. The exchange below uses a made-up fleet.</p>
+
+  <div class="af-grid">
+
+    <div class="af-chat" role="img" aria-label="Sample exchange. Question: why was Site 07 down on June 14. The answer attributes the outage to the utility side of the meter, cites four evidence records, and states what it cannot determine.">
+      <div class="af-head">
+        <div>
+          <div class="af-title">Ask the fleet</div>
+          <div class="af-sub">Sample Fleet · 12 sites · 14.6 MW</div>
+        </div>
+        <div class="af-flag">SAMPLE DATA</div>
+      </div>
+
+      <div class="af-body">
+        <div class="af-q">Why was Site 07 down on June 14?</div>
+
+        <div class="af-a">
+          <p>Site 07 was offline for 2 hours 45 minutes on June 14, from 14:02 to 16:47 EDT. The outage began at or above the site's collection bus, and the record places the origin beyond the meter.</p>
+          <p>All six inverters lost AC voltage within the same second <span class="af-c">E-114</span>. Independently fed inverters do not fail together, so the fault sits at the shared bus or upstream of it. The onset registers carry grid-observation bits in the first sampled interval <span class="af-c">E-115</span>, which places it upstream rather than on the site side, and the revenue meter recorded no export for the whole window <span class="af-c">E-116</span>.</p>
+          <p>The monitoring platform logged no downtime that day <span class="af-c">E-117</span>. Against the irradiance at the time <span class="af-c">E-118</span>, lost generation is 2.1 MWh, upper bound 2.4 MWh. None of it is booked anywhere yet.</p>
+
+          <div class="af-verdicts">
+            <span class="af-v af-v-att">Attributed · Utility</span>
+            <span class="af-v af-v-ver">Meter verified</span>
+            <span class="af-v af-v-unr">Not in site record</span>
+          </div>
+
+          <div class="af-limit"><span class="af-limit-k">What this cannot show</span> Why the utility feeder tripped. That record sits with the utility. Trackable can establish which side of the meter the fault came from, not what the utility's equipment did.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="af-side">
+      <div class="af-sms">
+        <div class="af-sms-k">THE SAME ANSWER, BY TEXT</div>
+        <p>Site 07 offline Jun 14, 14:02 to 16:47 EDT. Origin upstream of the meter (attributed). Meter confirms no export (verified). Not in the site's downtime log. Lost 2.1 MWh, upper bound 2.4.</p>
+        <p class="af-sms-ref">Ref: E-114 to E-118<br>trackable.systems/r/07-0614</p>
+      </div>
+
+      <ul class="af-points">
+        <li><b>Every claim carries its evidence.</b> Each citation opens the record it rests on, so the answer can be checked rather than believed.</li>
+        <li><b>Every claim carries a verdict.</b> Verified means two independent records agree. Attributed means the side of the meter is named. Not in site record is the gap Trackable exists to find.</li>
+        <li><b>It says what it cannot establish.</b> An assistant that answers everything is the problem this company was built to solve.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="af-note">Level 1 and Level 2 are available today. This is where the record goes next.</div>
 </div></section>
 
 <section class="indep"><div class="wrap">
