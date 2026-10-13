@@ -132,6 +132,15 @@ footer{border-top:1px solid var(--rule);padding:30px 0 40px}
 
 /* ask the fleet, roadmap preview */
 .askfleet{padding:96px 0 104px;border-top:1px solid var(--rule)}
+.rm{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:28px;border-top:1px solid var(--rule)}
+.rm-i{padding:18px 18px 4px 0;border-right:1px solid var(--rule);margin-right:18px}
+.rm-i:last-child{border-right:none;margin-right:0}
+.rm-k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;color:var(--graphite)}
+.rm-i.live .rm-k{color:var(--green);font-weight:600}
+.rm-i h4{font-size:16px;margin:8px 0 6px;color:var(--ink);font-weight:600}
+.rm-i p{font-size:14px;line-height:1.5;color:var(--graphite);margin:0}
+.af-h{margin-top:44px;font-size:22px}
+@media (max-width:760px){.rm{grid-template-columns:1fr 1fr}.rm-i{border-right:none;margin-right:0;padding-right:12px}}
 .af-lede{margin-top:20px;max-width:620px;color:var(--graphite)}
 .af-grid{display:grid;grid-template-columns:1.32fr 1fr;gap:38px;margin-top:40px;align-items:start}
 .af-chat{border:1px solid var(--rule);background:#fff}
@@ -297,14 +306,21 @@ footer{border-top:1px solid var(--rule);padding:30px 0 40px}
   </div>
   <div class="level">
     <div class="lv-tag">LEVEL 3<small>KEPT CURRENT</small></div>
-    <div><h3>Continuous intelligence</h3><p><b>With or without an instrument on site.</b> From the data your fleet already produces, every inverter is checked every day: alarms decoded, each unit measured against its neighbors, and anything new reported within a day. With an instrument, it adds an independent measurement that captures how a fault develops at 960 samples per second and reconciles to the revenue meter. Forensic reports follow significant events. Every measurement is written once and locked for seven years, so the performance number you hand a lender, an auditor, or a buyer rests on measurements kept unaltered, with every finding traceable to them, and comes <b>without the data-quality caveat.</b></p></div>
+    <div><h3>Continuous intelligence</h3><p><b>With or without an instrument on site.</b> From the data your fleet already produces, every inverter is checked every day: alarms decoded, each unit measured against its neighbors, and anything new reported within a day. <b>Running now at our pilot site,</b> it flags anything urgent by email each morning. With an instrument, it adds an independent measurement that captures how a fault develops at 960 samples per second and reconciles to the revenue meter. Forensic reports follow significant events. Every measurement is written once and locked for seven years, so the performance number you hand a lender, an auditor, or a buyer rests on measurements kept unaltered, with every finding traceable to them, and comes <b>without the data-quality caveat.</b></p></div>
   </div>
 </div></section>
 
 <section class="askfleet" id="ask"><div class="wrap">
-  <div class="eyebrow" style="margin-bottom:16px">On the roadmap</div>
-  <h2>Coming: ask the fleet.</h2>
-  <p class="af-lede">You ask a question about your fleet. You get an answer with the records behind it, and a plain statement of what the data cannot show. Not built yet. The exchange below uses a made-up fleet.</p>
+  <div class="eyebrow" style="margin-bottom:16px">Live now, and next</div>
+  <h2>Where the record goes next.</h2>
+  <div class="rm">
+    <div class="rm-i live"><span class="rm-k">LIVE</span><h4>Daily check</h4><p>Every inverter, every morning. Anything urgent arrives by email the same day.</p></div>
+    <div class="rm-i"><span class="rm-k">NEXT</span><h4>Monthly record</h4><p>What each site did that month, reconciled to the revenue meter, with every outage accounted for.</p></div>
+    <div class="rm-i"><span class="rm-k">NEXT</span><h4>Fleet dashboard</h4><p>The state of every site in one place, each number showing its source and when it was last checked.</p></div>
+    <div class="rm-i"><span class="rm-k">NEXT</span><h4>Ask the fleet</h4><p>Questions in plain English, by chat or text, answered from the record.</p></div>
+  </div>
+  <h3 class="af-h">Ask the fleet.</h3>
+  <p class="af-lede">Monitoring platforms are starting to add chat assistants. Those answer from the platform&#39;s own averages and its own idea of expected output, the very data that needs checking. Ask the fleet answers from independent records reconciled to the revenue meter, on any monitoring platform. Every claim cites the record behind it, and every answer says what the data cannot show. Not built yet. The exchange below uses a made-up fleet.</p>
 
   <div class="af-grid">
 
@@ -352,7 +368,7 @@ footer{border-top:1px solid var(--rule);padding:30px 0 40px}
 
   </div>
 
-  <div class="af-note">All three levels are available today. This is where the record goes next.</div>
+  <div class="af-note">All three levels are available today, and the daily check is already running.</div>
 </div></section>
 
 <section class="indep"><div class="wrap">
